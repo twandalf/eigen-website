@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update the logo based on the theme
     const logo = document.getElementById("site-logo");
     if (theme === "dark") {
-      logo.src = "/images/Antoine_Comer_white.svg";
+      logo.src = "./images/Antoine_Comer_white.svg";
     } else {
-      logo.src = "/images/Antoine_Comer_black.svg";
+      logo.src = "./images/Antoine_Comer_black.svg";
     }
   }
 
