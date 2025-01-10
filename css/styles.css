@@ -1,0 +1,433 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* #Wrapper and Header */
+
+.wrapper {
+  min-height: 100vh;
+  /* background-color: white; */
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header .logo {
+  max-width: 40%;
+  margin-left: 300;
+  padding: 0;
+  /* border: 3px solid black; */
+}
+
+.logo img {
+  margin-left: 2rem;
+}
+
+/* Navbar right */
+
+header .navbar-right {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: large;
+  gap: 25px;
+  margin: 20px;
+  margin-top: 30px;
+}
+
+header .navbar-right button {
+  /* background-color: white; */
+  border: solid 1.5px black;
+  border-radius: 20px;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar-right .current {
+  border: solid 1.5px black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.navbar-right a:hover {
+  border: solid 1.5px black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  max-width: 1100px;
+  margin: 60px auto 90px 115px;
+  gap: 50px;
+  justify-content: start;
+  align-items: start;
+  padding: 0 40px;
+}
+
+.intro {
+  display: block;
+}
+
+.intro p {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 40.5px;
+  margin-bottom: 90px;
+}
+
+.projectsandnotes {
+  display: flex;
+}
+
+.wrapperProjects {
+  display: flex-column;
+  flex: 1;
+}
+
+.wrapperProjects h2 {
+  padding-bottom: 10px;
+}
+
+.wrapperNotities h2 {
+  padding-bottom: 10px;
+}
+
+.wrapperProjects li {
+  list-style: none;
+}
+
+.wrapperNotities {
+  display: flex-column;
+  flex: 1;
+}
+
+.wrapperNotities li {
+  list-style: none;
+}
+
+/* Default theme (light theme fallback) */
+:root {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Apply to both html and body //////////////////////////////////////// */
+html.light-theme,
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+html.dark-theme,
+body.dark-theme {
+  background-color: #33473b;
+  color: #ffffff;
+}
+
+html.yellow-theme,
+body.yellow-theme {
+  background-color: #e0e446;
+  color: #000000;
+}
+
+/* Smooth Theme Transition */
+body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Add transitions to specific elements if needed */
+header a,
+header .navbar-right button,
+.navbar-right .current {
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Stylink links and resetting */
+/* Global link styles */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherits text color from parent */
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Theme Selector Styles */
+
+.theme-selector {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: inherit;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.theme-selector p {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.theme-selector label {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  cursor: pointer;
+}
+
+.theme-selector input[type="radio"] {
+  display: none; /* Hide default radio buttons */
+}
+
+.theme-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.theme-button.light {
+  background: #ffffff;
+  border: 2px solid #444;
+}
+
+.theme-button.dark {
+  background: #33473b;
+}
+
+.theme-button.yellow {
+  background: #e0e446;
+}
+
+.theme-button.selected {
+  outline: 2px solid #0078ff; /* Blue outline for selected button */
+  outline-offset: 0px;
+}
+
+/* Optional adjustments if needed */
+header .logo img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Theme-Specific Styles */
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-theme {
+  background-color: #33473b;
+  color: #ffffff;
+}
+
+body.yellow-theme {
+  background-color: #e0e446;
+  color: #000000;
+}
+
+/* Light Theme /////////////////////////////////////////////////////////////////*/
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-theme header a {
+  color: #000000;
+}
+
+body.light-theme .navbar-right button {
+  background-color: white;
+  color: black;
+  border: solid 1.5px black;
+}
+
+body.light-theme .navbar-right .current {
+  border: solid 1.5px black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+body.light-theme .navbar-right a:hover {
+  border: solid 1.5px black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: black;
+}
+
+/* Dark Theme ///////////////////////////////////////////////////////////////*/
+body.dark-theme {
+  background-color: #33473b;
+  color: #ffffff;
+}
+
+body.dark-theme header a {
+  color: #ffffff;
+}
+
+body.dark-theme .navbar-right button {
+  background-color: #33473b;
+  color: white;
+  border: solid 1.5px white;
+}
+
+body.dark-theme .navbar-right .current {
+  border: solid 1.5px white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+body.dark-theme .navbar-right a:hover {
+  border: solid 1.5px white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: white;
+}
+
+/* Yellow Theme //////////////////////////////////////////////////////////////////*/
+body.yellow-theme {
+  background-color: #e0e446;
+  color: #000000;
+}
+
+body.yellow-theme header a {
+  color: #000000;
+}
+
+body.yellow-theme .navbar-right button {
+  background-color: #d8e6ff;
+  color: black;
+  border: solid 1.5px black;
+}
+
+body.yellow-theme .navbar-right .current {
+  border: solid 1.5px black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+body.yellow-theme .navbar-right a:hover {
+  border: solid 1.5px black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: black;
+}
+
+/* Projectenpagina alsook projecten op index //////////////////////////////////////////////////////////////// */
+.smolquote {
+  font-size: 1rem;
+}
+
+.projectlist li,
+.Notities li {
+  margin-bottom: 5px !important;
+}
+
+.intro-projecten {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 40.5px;
+  margin: 16px 0px 90px 0px;
+}
+
+.projectenlijst {
+  text-decoration: none !important;
+  font-style: inherit;
+}
+
+.time {
+  margin-bottom: 0.5em;
+  line-height: 1.25;
+}
+
+.link-projectje .projectTitle,
+.wrapperProjects a,
+.Notities li {
+  text-decoration: none;
+  margin-bottom: 0.3em;
+}
+
+.link-projectje:hover .projectTitle,
+.wrapperProjects a:hover,
+.Notities a:hover {
+  text-decoration: underline;
+  text-decoration-color: inherit;
+  text-decoration-thickness: 2px;
+}
+
+.projectDescription {
+  padding-bottom: 15px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  header .logo {
+    max-width: 100%;
+    display: block;
+    padding: 0 8px 0 0;
+  }
+
+  .main-content {
+    font-size: 18px;
+    line-height: 30.5px;
+    margin: 15px 0px 15px 0px;
+    padding: 15px;
+    text-align: center;
+
+    align-items: center;
+  }
+
+  .theme-selector {
+    display: none;
+  }
+}

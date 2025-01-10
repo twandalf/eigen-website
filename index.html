@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antoine Comer</title>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.classList.add(savedTheme + "-theme");
+        }
+      })();
+    </script>
+
+    <link
+      rel="icon"
+      href="./images/c8056c60767b58ecf488e8683f8c7375-wizard-hat-semi-flat.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("selectedTheme") || "light";
+        document.documentElement.classList.add(`${savedTheme}-theme`);
+        document.body.classList.add(`${savedTheme}-theme`);
+      })();
+    </script>
+
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <a href="index.html">
+            <img
+              id="site-logo"
+              src="/images/Antoine_Comer_black.svg"
+              alt="Antoine Comer Logo"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="navbar-right">
+          <div><a tabindex="0" class="current" href="#">Home</a></div>
+          <div><a href="/projecten.html">Projecten</a></div>
+          <div><a href="https://github.com/twandalf">Github</a></div>
+          <button>
+            <a href="mailto:antoine.comer@protonmail.com">Contact</a>
+          </button>
+        </div>
+      </header>
+      <main class="main-content">
+        <div class="intro">
+          <p>
+            Hallo! Ik ben een web developer met een passie voor het bouwen van
+            mooie, simpele en gebruiksvriendelijke websites. Met een achtergrond
+            in de linguistiek (Toegepaste Taalkunde), marketing (content
+            writing/copywriting) en het onderwijs combineer ik heel wat diverse
+            skills. Het indieweb, en spreken met enthousiaste developers heeft
+            mijn liefde voor het web echt aangewakkerd!
+          </p>
+        </div>
+        <div class="projectsandnotes">
+          <div class="wrapperProjects">
+            <h2>Web Projects</h2>
+            <ul class="projectlist">
+              <li>
+                <a href="https://twandalf.github.io/HansMadeGuitars/"
+                  >HansMade Guitars</a
+                >
+              </li>
+              <li>
+                <a href="/projecten.html">Lumina Creative</a>
+              </li>
+              <li>
+                <a href="/projecten.html">Workopia</a>
+              </li>
+            </ul>
+          </div>
+          <div class="wrapperNotities">
+            <h2>Over mij</h2>
+            <ul class="Notities">
+              <li>
+                <i class="fa-solid fa-envelope"></i
+                ><a href="mailto:antoine.comer@protonmail.com"> antoine.comer@protonmail.com</a>
+              </a
+                >
+              </li>
+              <li><i class="fa-solid fa-phone"></i>+32 476 717 461</li>
+            </ul>
+          </div>
+        </div>
+        <div class="theme-selector">
+          <p>Thema</p>
+          <label>
+            <input type="radio" name="theme" value="light" checked />
+            <span class="theme-button light"></span>
+          </label>
+          <label>
+            <input type="radio" name="theme" value="dark" />
+            <span class="theme-button dark"></span>
+          </label>
+          <label>
+            <input type="radio" name="theme" value="yellow" />
+            <span class="theme-button yellow"></span>
+          </label>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="./script.js" defer></script>
+</html>

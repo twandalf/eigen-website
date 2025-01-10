@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antoine Comer</title>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.classList.add(savedTheme + "-theme");
+        }
+      })();
+    </script>
+
+    <link
+      rel="icon"
+      href="./images/c8056c60767b58ecf488e8683f8c7375-wizard-hat-semi-flat.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("selectedTheme") || "light";
+        document.documentElement.classList.add(`${savedTheme}-theme`);
+        document.body.classList.add(`${savedTheme}-theme`);
+      })();
+    </script>
+
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <a href="index.html">
+            <img
+              id="site-logo"
+              src="/images/Antoine_Comer_black.svg"
+              alt="Antoine Comer Logo"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="navbar-right">
+          <div><a href="/index.html">Home</a></div>
+          <div><a class="current" href="/projecten.html">Projecten</a></div>
+          <div><a href="https://github.com/twandalf">Github</a></div>
+          <button>Contact</button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <p class="smolquote">Al doende leert men</p>
+        <div class="intro-projecten">
+          <h2>Web Dev Projecten</h2>
+        </div>
+        <div class="projectenlijst">
+          <div class="wrapper-projectje">
+            <a
+              href="https://twandalf.github.io/HansMadeGuitars/"
+              class="link-projectje"
+            >
+              <p class="time">8 januari 2025</p>
+              <h3 class="projectTitle">HansMade Guitars</h3>
+              <p class="projectDescription">
+                Een website voor een gitaarbouwer, gemaakt met Hugo, en gehost
+                op Github Pages. Het was mijn eerste ervaring met een static
+                site generator, heb alsook leren werken met Git en Github.
+                Gemaakt voor de papa van een vriend, klik om een kijkje te
+                nemen!
+              </p>
+            </a>
+          </div>
+          <div class="wrapper-projectje">
+            <a
+              href="https://cosmic-dolphin-768d8a.netlify.app/"
+              class="link-projectje"
+            >
+              <p class="time">15 december 2024</p>
+              <h3 class="projectTitle">Lumina Creative</h3>
+              <p class="projectDescription">
+                Een website voor een fictief bedrijf, een creative agency
+                genaamd Lumina. Het was grotendeels mijn introductie tot HTML,
+                CSS, SCSS. Ik heb leren werken met Flexbox, Grid, Lightbox.
+                Gemaakt dankzij de lessen van Brad Traversy, en deze staat
+                gehost op
+                <a href="https://cosmic-dolphin-768d8a.netlify.app/">Netlify</a
+                >.
+              </p>
+            </a>
+          </div>
+          <div class="wrapper-projectje">
+            <a href="#" class="link-projectje">
+              <p class="time">15 October 2024</p>
+              <h3 class="projectTitle">Workopia</h3>
+              <p class="projectDescription">
+                Workopia is een vacaturewebsite van Brad Traversy's "PHP From
+                Scratch"-cursus. Het bevat een custom Laravel-achtige router,
+                controller-classes, views, een database en een projectstructuur
+                met behulp van namespaces en PSR-4 autoloading. Het laat zien
+                hoe je een PHP-project structureert zonder gebruik te maken van
+                frameworks of libraries.
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="theme-selector">
+          <p>Thema</p>
+          <label>
+            <input type="radio" name="theme" value="light" checked />
+            <span class="theme-button light"></span>
+          </label>
+          <label>
+            <input type="radio" name="theme" value="dark" />
+            <span class="theme-button dark"></span>
+          </label>
+          <label>
+            <input type="radio" name="theme" value="yellow" />
+            <span class="theme-button yellow"></span>
+          </label>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="./script.js" defer></script>
+</html>
