@@ -411,10 +411,18 @@ body.yellow-theme .navbar-right a:hover {
     gap: 1.5rem;
     align-items: center;
   }
+
   header .logo {
     max-width: 100%;
-    display: block;
-    padding: 0 8px 0 0;
+    display: flex; /* Ensure it's a flex container */
+    justify-content: center; /* Center the logo horizontally */
+    margin: 0 auto; /* Center it within the parent container */
+    padding: 0; /* Reset padding */
+  }
+
+  header .navbar-right {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .main-content {
@@ -427,7 +435,33 @@ body.yellow-theme .navbar-right a:hover {
     align-items: center;
   }
 
+  .intro p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 50px;
+  }
+
+  .projectsandnotes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .theme-selector {
-    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 10px;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); */
+    z-index: 1000;
+    width: auto;
+    justify-content: center;
+  }
+
+  .theme-selector p {
+    display: none; /* Hide the "Thema" text on smaller screens */
   }
 }
