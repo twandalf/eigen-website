@@ -12,39 +12,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update the logo based on the theme
     const logo = document.getElementById("site-logo");
-    if (theme === "dark") {
-      logo.src = "./images/Antoine_Comer_white.svg";
-    } else {
-      logo.src = "./images/Antoine_Comer_black.svg";
-    }
+    logo.src =
+      theme === "dark"
+        ? "./images/Antoine_Comer_white.svg"
+        : "./images/Antoine_Comer_black.svg";
+
+    // Remove manual background-color setting for contact bar
   }
 
   // Function to update the selected theme indicator
   function updateThemeIndicator(selectedTheme) {
     themeSelector.forEach((radio) => {
-      // Find the button associated with the theme
       const themeButton = radio.nextElementSibling;
-      if (radio.value === selectedTheme) {
-        themeButton.classList.add("selected");
-      } else {
-        themeButton.classList.remove("selected");
-      }
+      themeButton.classList.toggle("selected", radio.value === selectedTheme);
     });
   }
 
   // Load the previously saved theme from localStorage
   const savedTheme = localStorage.getItem("selectedTheme") || "light";
-
-  // Apply the saved theme
   applyTheme(savedTheme);
-
-  // Ensure the correct radio button is selected when the page loads
   document.querySelector(`input[value="${savedTheme}"]`).checked = true;
 
-  // Listen for changes (when the user selects a theme)
+  // Listen for theme changes
   themeSelector.forEach((radio) => {
     radio.addEventListener("change", (e) => {
-      applyTheme(e.target.value); // Apply the selected theme
+      applyTheme(e.target.value);
     });
+  });
+});
+
+// Contact Bar Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const contactButton = document.querySelector("header button a");
+  const contactBar = document.getElementById("contact-bar");
+  const closeButton = document.querySelector(".close-btn");
+  const wrapper = document.querySelector(".wrapper");
+
+  contactButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    contactBar.classList.toggle("show");
+    wrapper.classList.toggle("contact-visible");
+  });
+
+  closeButton.addEventListener("click", () => {
+    contactBar.classList.remove("show");
+    wrapper.classList.remove("contact-visible");
   });
 });
