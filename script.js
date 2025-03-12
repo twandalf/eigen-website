@@ -43,19 +43,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Contact Bar Logic
 document.addEventListener("DOMContentLoaded", () => {
-  const contactButton = document.querySelector("header button a");
+  const contactButton = document.querySelector("header button");
   const contactBar = document.getElementById("contact-bar");
   const closeButton = document.querySelector(".close-btn");
   const wrapper = document.querySelector(".wrapper");
 
-  contactButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    contactBar.classList.toggle("show");
-    wrapper.classList.toggle("contact-visible");
-  });
+  if (contactButton) {
+    contactButton.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevents default behavior (useful if there's an <a> inside)
+      console.log("Contact button found:", contactButton);
+      contactBar.classList.toggle("show");
+      wrapper.classList.toggle("contact-visible");
+    });
+  }
 
-  closeButton.addEventListener("click", () => {
-    contactBar.classList.remove("show");
-    wrapper.classList.remove("contact-visible");
-  });
+  if (closeButton) {
+    closeButton.addEventListener("click", () => {
+      contactBar.classList.remove("show");
+      wrapper.classList.remove("contact-visible");
+    });
+  }
 });

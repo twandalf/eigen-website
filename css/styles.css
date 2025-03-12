@@ -454,10 +454,10 @@ body.yellow-theme .navbar-right a:hover {
 
   header .logo {
     max-width: 100%;
-    display: flex; /* Ensure it's a flex container */
-    justify-content: center; /* Center the logo horizontally */
-    margin: 0 auto; /* Center it within the parent container */
-    padding: 0; /* Reset padding */
+    display: flex; 
+    justify-content: center; 
+    margin: 0 auto; 
+    padding: 0; 
   }
 
   header .navbar-right {
